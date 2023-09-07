@@ -15,14 +15,12 @@ prev.onclick = function(){
     reloadSlider();
 }
 
-// let refreshInterval = setInterval(()=> {next.click()}, 3000);
+let refreshInterval = setInterval(()=> {next.click()}, 3000);
 function reloadSlider(){
     console.log('hehe');
     console.log(items[active].offsetLeft    );
     slider.style.left = -items[active].offsetLeft + 'px';
 
-    // clearInterval(refreshInterval);
-    // refreshInterval = setInterval(()=> {next.click()}, 3000);
-
-    
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(()=> {next.click()}, 3000);
 }
